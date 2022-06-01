@@ -1,0 +1,78 @@
+<%- layout('boilerplate') -%>
+<%- include("flash")-%>
+    <div class="container text-center px-0" style="background-color:#b7cfc9;width: 50%;margin-top: 0%;">
+        <div>
+            <h3 style="font-family:arial;text-align: center;color: whitesmoke;padding: 10px;background-color:#9b2a5e ;">
+                LLL Bank</h3>
+        </div>
+        <form class="py-5" action="/createaccount" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <b>Name</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="name" required>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <b>Phone No</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="p_no"r>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <b>Email</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" name="email">
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <b>DOB</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="date" name="dob" required>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <b>Initial Deposit</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="ini_depo" required>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <b>New PIN</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="pin1" required>
+                </div>
+            </div><br>
+            <div class="row">       
+                <div class="col-md-6">
+                    <b>Re-enter PIN</b>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="pin2">
+                </div>
+            </div><br>
+            <div class="row">       
+                <div class="col-md-6">
+                    <b>Address</b>
+                </div>
+                <div class="col-md-6">
+                    <textarea name="add" id="" cols="30" rows="10">Enter here</textarea>
+                </div>
+            </div><br>
+
+
+            <button style="background-color: #9b2a5e; padding: 5px;" class="btn">Submit</button>
+        </form>
+    </div>

@@ -1,0 +1,41 @@
+<%- layout('boilerplate') -%>
+<%- include("flash")-%>
+
+<div class="container text-center px-0" style="border: 0px;background-color:#b7cfc9;width: 50%;margin-top: 150px;">
+    <div >
+        <h3 style="font-family:arial;text-align: center;color: whitesmoke;padding: 10px;background-color:#9b2a5e ;">LLL Bank</h3>
+    </div>
+    <div style=" display: flex;justify-content: end" class="p-4">
+        <a class="btn btn-success" href="/creataccount">Create</a></div>
+    <div class="table-responsive px-3 pt-1 p-5" >
+    
+    <table class="table table-striped  table-overflow" >
+        <thead>
+            <th>S.no</th>
+            <% for( let index = 0; index < result.metaData.length-1; index++ ) { %>
+                <th><%= result.metaData[index].name %> </th>
+            
+            <% } %>
+
+                
+            
+            
+            
+        </thead>
+        <tbody>
+            <% var i; %> 
+            <% for( let index = 0; index < result.rows.length; index++ ) { %>        
+                <tr>
+                    <td><%= index+1 %> </td>
+                    <% for(  i= 0; i < result.rows[index].length-2; i++ ) { %>       
+                        <td><%=result.rows[index][i] %> </td>                    
+                    <% } %>   
+                    <td> <a href="/customer/<%=result.rows[index][i]%>"><%=result.rows[index][i] %></a> </td>             
+                </tr>
+            <% } %>
+            
+         
+        </tbody>
+    </table>
+</div>
+</div>

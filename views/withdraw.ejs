@@ -1,0 +1,45 @@
+<%- layout('boilerplate') -%>
+
+
+<%- include("flash")-%>
+    <div class="container text-center px-0"
+        style="border: 0px;background-color:#b7cfc9;width: 50%; padding-top: 0%;margin-top: 150px;">
+        <div>
+            <h3
+                style="font-family:arial;text-align: center;color: whitesmoke;margin-top: 0%;padding: 10px;background-color:#9b2a5e ;">
+                LLL Bank</h3>
+        </div>
+        <div class="py-5">
+            <form action="/withdraw" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                       <b>Account Number</b> 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="acc_no"> 
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>PIN</b>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="pin" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>Amount</b>
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="w_amt"  placeholder="₹"><br>
+                    </div>
+                </div><br>
+               
+                
+                <button style="background-color: #9b2a5e; padding: 8px; color: white;" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
